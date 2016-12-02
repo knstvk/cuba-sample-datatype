@@ -2,6 +2,8 @@
 
     <datatype class="com.company.sample.entity.CurrencyDatatype" javaType="java.math.BigDecimal"/>
 
+    <datatype class="com.company.sample.entity.YearDatatype" javaType="java.lang.Integer"/>
+
     <datatype class="com.haulmont.chile.core.datatypes.impl.BooleanDatatype"/>
 
     <datatype class="com.haulmont.chile.core.datatypes.impl.IntegerDatatype"

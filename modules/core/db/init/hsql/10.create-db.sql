@@ -10,6 +10,7 @@ create table SAMPLE_ORDER (
     DELETED_BY varchar(50),
     --
     DATE_ date,
+    YEAR_ integer,
     AMOUNT decimal,
     --
     primary key (ID)

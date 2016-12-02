@@ -19,9 +19,22 @@ public class Order extends StandardEntity {
     @Column(name = "DATE_")
     protected Date date;
 
+    @MetaProperty(datatype = YearDatatype.NAME)
+    @Column(name = "YEAR_")
+    protected Integer year;
+
     @MetaProperty(datatype = CurrencyDatatype.NAME)
     @Column(name = "AMOUNT")
     protected BigDecimal amount;
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
+
+    public Integer getYear() {
+        return year;
+    }
+
 
     public void setDate(Date date) {
         this.date = date;

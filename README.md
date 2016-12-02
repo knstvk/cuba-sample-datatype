@@ -1,3 +1,3 @@
 # cuba-sample-datatype
 
-Example of creating a datatype for currency values.
+Example of creating custom datatypes for currency and year.

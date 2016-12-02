@@ -33,6 +33,7 @@
             <columns>
                 <column id="date"/>
                 <column id="amount"/>
+                <column id="year"/>
             </columns>
             <rows datasource="ordersDs"/>
             <rowsCount/>

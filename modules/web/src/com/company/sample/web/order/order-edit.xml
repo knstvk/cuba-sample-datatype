@@ -19,6 +19,7 @@
             <column width="250px">
                 <field id="date"/>
                 <field id="amount"/>
+                <field id="year"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"
