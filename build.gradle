@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.3.4'
+    ext.cubaVersion = '6.4.2'
     repositories {
         maven {
             url 'https://repo.cuba-platform.com/content/groups/work'
@@ -39,6 +39,9 @@ cuba {
     }
     tomcat {
         dir = "$project.rootDir/build/tomcat"
+    }
+    ide {
+        vcs = 'Git'
     }
 }
 
@@ -195,7 +198,7 @@ task restart(dependsOn: ['stop', ':app-core:deploy', ':app-web:deploy'], descrip
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.13'
+    gradleVersion = '3.1'
 }
 
 apply from: 'extra.gradle'
