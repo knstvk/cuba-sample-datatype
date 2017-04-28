@@ -76,22 +76,6 @@ public class YearDatatype extends NumberDatatype implements Datatype<Integer> {
         return parse(value);
     }
 
-    @Nullable
-    @Override
-    public Integer read(ResultSet resultSet, int index) throws SQLException {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
-    public void write(PreparedStatement statement, int index, @Nullable Object value) throws SQLException {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
-    public int getSqlType() {
-        return Types.INTEGER;
-    }
-
     @Override
     public String toString() {
         return NAME;

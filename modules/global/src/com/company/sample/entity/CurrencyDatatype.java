@@ -79,22 +79,6 @@ public class CurrencyDatatype extends NumberDatatype implements Datatype<BigDeci
         return parse(value);
     }
 
-    @Nullable
-    @Override
-    public BigDecimal read(ResultSet resultSet, int index) throws SQLException {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
-    public void write(PreparedStatement statement, int index, @Nullable Object value) throws SQLException {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
-    public int getSqlType() {
-        return Types.NUMERIC;
-    }
-
     @Override
     public String toString() {
         return NAME;
