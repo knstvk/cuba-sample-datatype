@@ -7,6 +7,8 @@
         <datatype class="com.company.sample.entity.CurrencyDatatype" javaType="java.math.BigDecimal"/>
 
         <datatype class="com.company.sample.entity.YearDatatype" javaType="java.lang.Integer"/>
+
+        <datatype class="com.company.sample.entity.IntervalDatatype" javaType="java.lang.Integer"/>
     </datatypes>
 
     <metadata-model root-package="com.company.sample" namespace="sample"/>

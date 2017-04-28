@@ -1,5 +1,4 @@
--- begin SAMPLE_ORDER
-create table SAMPLE_ORDER (
+-- begin SAMPLE_ORDERcreate table SAMPLE_ORDER (
     ID varchar(36) not null,
     VERSION integer not null,
     CREATE_TS timestamp,
@@ -12,6 +11,7 @@ create table SAMPLE_ORDER (
     DATE_ date,
     YEAR_ integer,
     AMOUNT decimal,
+    EXPIRE_IN integer,
     --
     primary key (ID)
 )^

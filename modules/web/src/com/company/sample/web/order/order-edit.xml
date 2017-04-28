@@ -20,6 +20,7 @@
                 <field id="date"/>
                 <field id="amount"/>
                 <field id="year"/>
+                <field id="expireIn"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

@@ -27,6 +27,19 @@ public class Order extends StandardEntity {
     @Column(name = "AMOUNT")
     protected BigDecimal amount;
 
+    @MetaProperty(datatype = IntervalDatatype.NAME)
+    @Column(name = "EXPIRE_IN")
+    protected Integer expireIn;
+
+    public void setExpireIn(Integer expireIn) {
+        this.expireIn = expireIn;
+    }
+
+    public Integer getExpireIn() {
+        return expireIn;
+    }
+
+
     public void setYear(Integer year) {
         this.year = year;
     }
