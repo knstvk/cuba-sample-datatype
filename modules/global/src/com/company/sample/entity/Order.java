@@ -1,14 +1,11 @@
 package com.company.sample.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import com.haulmont.chile.core.annotations.MetaProperty;
+import com.haulmont.cuba.core.entity.StandardEntity;
+
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import com.haulmont.cuba.core.entity.StandardEntity;
-import com.haulmont.chile.core.annotations.MetaProperty;
 
 @Table(name = "SAMPLE_ORDER")
 @Entity(name = "sample$Order")
@@ -19,15 +16,15 @@ public class Order extends StandardEntity {
     @Column(name = "DATE_")
     protected Date date;
 
-    @MetaProperty(datatype = YearDatatype.NAME)
+    @MetaProperty(datatype = "year")
     @Column(name = "YEAR_")
     protected Integer year;
 
-    @MetaProperty(datatype = CurrencyDatatype.NAME)
+    @MetaProperty(datatype = "currency")
     @Column(name = "AMOUNT")
     protected BigDecimal amount;
 
-    @MetaProperty(datatype = IntervalDatatype.NAME)
+    @MetaProperty(datatype = "interval")
     @Column(name = "EXPIRE_IN")
     protected Integer expireIn;
 

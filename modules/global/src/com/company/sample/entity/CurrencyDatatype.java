@@ -5,7 +5,6 @@ import com.haulmont.chile.core.datatypes.Datatype;
 import com.haulmont.chile.core.datatypes.impl.NumberDatatype;
 import org.dom4j.Element;
 
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
@@ -14,8 +13,6 @@ import java.util.Locale;
 
 public class CurrencyDatatype extends NumberDatatype implements Datatype<BigDecimal> {
 
-    public static final String NAME = "currency";
-
     private static final String PATTERN = "$#,##0.00";
 
     public CurrencyDatatype(Element element) {
@@ -23,16 +20,10 @@ public class CurrencyDatatype extends NumberDatatype implements Datatype<BigDeci
     }
 
     @Override
-    public String getName() {
-        return NAME;
-    }
-
-    @Override
     public Class getJavaClass() {
         return BigDecimal.class;
     }
 
-    @Nonnull
     @Override
     public String format(@Nullable Object value) {
         if (value == null)
@@ -42,7 +33,6 @@ public class CurrencyDatatype extends NumberDatatype implements Datatype<BigDeci
         return format.format(value);
     }
 
-    @Nonnull
     @Override
     public String format(@Nullable Object value, Locale locale) {
         return format(value);
@@ -73,10 +63,5 @@ public class CurrencyDatatype extends NumberDatatype implements Datatype<BigDeci
     @Override
     public BigDecimal parse(@Nullable String value, Locale locale) throws ParseException {
         return parse(value);
-    }
-
-    @Override
-    public String toString() {
-        return NAME;
     }
 }

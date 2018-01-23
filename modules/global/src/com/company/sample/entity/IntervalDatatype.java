@@ -5,7 +5,6 @@ import com.haulmont.chile.core.datatypes.Datatype;
 import com.haulmont.chile.core.datatypes.impl.NumberDatatype;
 import org.dom4j.Element;
 
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.text.ParseException;
 import java.util.Locale;
@@ -14,8 +13,6 @@ import java.util.regex.Pattern;
 
 public class IntervalDatatype extends NumberDatatype implements Datatype<Integer> {
 
-    public static final String NAME = "interval";
-
     private static final Pattern PATTERN = Pattern.compile("((\\d{1,})\\s*d)*\\s*((\\d{1,})\\s*h)*\\s*((\\d{1,})\\s*m)*\\s*((\\d{1,})\\s*s)*");
 
     public IntervalDatatype(Element element) {
@@ -23,16 +20,10 @@ public class IntervalDatatype extends NumberDatatype implements Datatype<Integer
     }
 
     @Override
-    public String getName() {
-        return NAME;
-    }
-
-    @Override
     public Class getJavaClass() {
         return Integer.class;
     }
 
-    @Nonnull
     @Override
     public String format(@Nullable Object value) {
         if (value == null)
@@ -66,7 +57,6 @@ public class IntervalDatatype extends NumberDatatype implements Datatype<Integer
         return sb.toString();
     }
 
-    @Nonnull
     @Override
     public String format(@Nullable Object value, Locale locale) {
         return format(value);

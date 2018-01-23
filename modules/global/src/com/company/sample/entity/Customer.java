@@ -1,11 +1,12 @@
 package com.company.sample.entity;
 
+import com.haulmont.chile.core.annotations.MetaProperty;
+import com.haulmont.chile.core.annotations.NamePattern;
+import com.haulmont.cuba.core.entity.StandardEntity;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.Column;
-import com.haulmont.cuba.core.entity.StandardEntity;
-import com.haulmont.chile.core.annotations.NamePattern;
-import com.haulmont.chile.core.annotations.MetaProperty;
 
 @NamePattern("%s|name")
 @Table(name = "SAMPLE_CUSTOMER")
@@ -16,7 +17,7 @@ public class Customer extends StandardEntity {
     @Column(name = "NAME")
     protected String name;
 
-    @MetaProperty(datatype = PhoneDatatype.NAME)
+    @MetaProperty(datatype = "phone")
     @Column(name = "PHONE")
     protected String phone;
 

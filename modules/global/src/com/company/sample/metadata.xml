@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <metadata xmlns="http://schemas.haulmont.com/cuba/metadata.xsd">
-
     <datatypes>
-        <datatype class="com.company.sample.entity.PhoneDatatype" javaType="java.lang.String" sqlType="varchar(50)"/>
-
-        <datatype class="com.company.sample.entity.CurrencyDatatype" javaType="java.math.BigDecimal"/>
-
-        <datatype class="com.company.sample.entity.YearDatatype" javaType="java.lang.Integer"/>
-
-        <datatype class="com.company.sample.entity.IntervalDatatype" javaType="java.lang.Integer"/>
+        <datatype id="phone"
+                  class="com.company.sample.entity.PhoneDatatype"
+                  javaType="java.lang.String"
+                  sqlType="varchar(50)"/>
+        <datatype id="currency"
+                  class="com.company.sample.entity.CurrencyDatatype"
+                  javaType="java.math.BigDecimal"/>
+        <datatype id="year"
+                  class="com.company.sample.entity.YearDatatype"
+                  javaType="java.lang.Integer"/>
+        <datatype id="interval"
+                  class="com.company.sample.entity.IntervalDatatype"
+                  javaType="java.lang.Integer"/>
     </datatypes>
-
-    <metadata-model root-package="com.company.sample" namespace="sample"/>
-
+    <metadata-model namespace="sample"
+                    root-package="com.company.sample"/>
 </metadata>
