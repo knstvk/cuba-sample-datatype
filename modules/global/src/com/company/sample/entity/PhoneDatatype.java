@@ -1,10 +1,9 @@
 package com.company.sample.entity;
 
+import com.haulmont.chile.core.annotations.JavaClass;
 import com.haulmont.chile.core.datatypes.impl.StringDatatype;
 
-/**
- *
- */
+@JavaClass(String.class)
 public class PhoneDatatype extends StringDatatype {
 
     @Override

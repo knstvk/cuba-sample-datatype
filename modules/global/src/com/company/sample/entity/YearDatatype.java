@@ -5,6 +5,7 @@
 package com.company.sample.entity;
 
 import com.google.common.base.Strings;
+import com.haulmont.chile.core.annotations.JavaClass;
 import com.haulmont.chile.core.datatypes.Datatype;
 import com.haulmont.chile.core.datatypes.impl.NumberDatatype;
 import org.dom4j.Element;
@@ -14,17 +15,13 @@ import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.util.Locale;
 
+@JavaClass(Integer.class)
 public class YearDatatype extends NumberDatatype implements Datatype<Integer> {
 
     private static final String PATTERN = "##00";
 
     public YearDatatype(Element element) {
         super(element);
-    }
-
-    @Override
-    public Class getJavaClass() {
-        return Integer.class;
     }
 
     @Override

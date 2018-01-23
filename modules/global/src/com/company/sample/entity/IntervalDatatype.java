@@ -1,6 +1,7 @@
 package com.company.sample.entity;
 
 import com.google.common.base.Strings;
+import com.haulmont.chile.core.annotations.JavaClass;
 import com.haulmont.chile.core.datatypes.Datatype;
 import com.haulmont.chile.core.datatypes.impl.NumberDatatype;
 import org.dom4j.Element;
@@ -11,17 +12,13 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@JavaClass(Integer.class)
 public class IntervalDatatype extends NumberDatatype implements Datatype<Integer> {
 
     private static final Pattern PATTERN = Pattern.compile("((\\d{1,})\\s*d)*\\s*((\\d{1,})\\s*h)*\\s*((\\d{1,})\\s*m)*\\s*((\\d{1,})\\s*s)*");
 
     public IntervalDatatype(Element element) {
         super(element);
-    }
-
-    @Override
-    public Class getJavaClass() {
-        return Integer.class;
     }
 
     @Override

@@ -3,17 +3,13 @@
     <datatypes>
         <datatype id="phone"
                   class="com.company.sample.entity.PhoneDatatype"
-                  javaType="java.lang.String"
                   sqlType="varchar(50)"/>
         <datatype id="currency"
-                  class="com.company.sample.entity.CurrencyDatatype"
-                  javaType="java.math.BigDecimal"/>
+                  class="com.company.sample.entity.CurrencyDatatype"/>
         <datatype id="year"
-                  class="com.company.sample.entity.YearDatatype"
-                  javaType="java.lang.Integer"/>
+                  class="com.company.sample.entity.YearDatatype"/>
         <datatype id="interval"
-                  class="com.company.sample.entity.IntervalDatatype"
-                  javaType="java.lang.Integer"/>
+                  class="com.company.sample.entity.IntervalDatatype"/>
     </datatypes>
     <metadata-model namespace="sample"
                     root-package="com.company.sample"/>

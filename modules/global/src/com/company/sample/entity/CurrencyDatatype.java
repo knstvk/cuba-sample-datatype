@@ -1,6 +1,7 @@
 package com.company.sample.entity;
 
 import com.google.common.base.Strings;
+import com.haulmont.chile.core.annotations.JavaClass;
 import com.haulmont.chile.core.datatypes.Datatype;
 import com.haulmont.chile.core.datatypes.impl.NumberDatatype;
 import org.dom4j.Element;
@@ -11,17 +12,13 @@ import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.util.Locale;
 
+@JavaClass(BigDecimal.class)
 public class CurrencyDatatype extends NumberDatatype implements Datatype<BigDecimal> {
 
     private static final String PATTERN = "$#,##0.00";
 
     public CurrencyDatatype(Element element) {
         super(element);
-    }
-
-    @Override
-    public Class getJavaClass() {
-        return BigDecimal.class;
     }
 
     @Override
