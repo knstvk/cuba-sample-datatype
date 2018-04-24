@@ -33,6 +33,7 @@
             <columns>
                 <column id="name"/>
                 <column id="phone"/>
+                <column id="active"/>
             </columns>
             <rows datasource="customersDs"/>
             <rowsCount/>

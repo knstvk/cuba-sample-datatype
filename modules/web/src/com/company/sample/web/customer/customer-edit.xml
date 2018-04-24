@@ -21,6 +21,7 @@
                 <field id="phone"
                        custom="true"
                        generator="generatePhoneField"/>
+                <field property="active"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

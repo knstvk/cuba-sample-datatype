@@ -5,6 +5,7 @@ import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -20,6 +21,19 @@ public class Customer extends StandardEntity {
     @MetaProperty(datatype = "phone")
     @Column(name = "PHONE")
     protected String phone;
+
+    @Column(name = "ACTIVE", columnDefinition = "varchar(10)")
+    @Convert(converter = BooleanToYesNoStringConverter.class)
+    protected Boolean active;
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
 
     public void setPhone(String phone) {
         this.phone = phone;

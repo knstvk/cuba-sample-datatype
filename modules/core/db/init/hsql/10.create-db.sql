@@ -29,6 +29,7 @@ create table SAMPLE_CUSTOMER (
     --
     NAME varchar(255),
     PHONE varchar(50),
+    ACTIVE varchar(10),
     --
     primary key (ID)
 )^
